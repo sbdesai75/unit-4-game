@@ -7,7 +7,7 @@ var previous = 0;
 
 var resetandStart = function () {
 
-    $("cystals").empty();
+    $(".cystals").empty();
 
     var images = ['', '', '', '',];
 
@@ -18,7 +18,7 @@ var resetandStart = function () {
     for (var i = 0; i < 4; i++) {
         var random = Math.floor(Math.random() * 11) + 1;
 
-        $("crystals").empty();
+        $(".crystals").empty();
 
 
 
@@ -36,14 +36,14 @@ var resetandStart = function () {
 
     }
 
-    $("previous").html("Total Score", previous);
+    $("#previous").html("Total Score", previous);
 
 
 }
 
 
 
-$("previous").html(previous);
+$("#previous").html(previous);
 
 resetandStart();
 
@@ -57,7 +57,7 @@ $(document).on('click', function () {
 
     previous += num;
 
-    $("previous").html("Total Score", + previous);
+    $("#previous").html("Total Score", + previous);
 
     console.log(previous);
 
@@ -68,14 +68,14 @@ $(document).on('click', function () {
 
         previous = 0;
 
-        $("previous").html(previous);
+        $("#previous").html(previous);
     }
     else if (previous === random_result) {
         win++;
 
         $("#win").html(win);
 
-        $("previous").html("You Win!!!", + win);
+        $("#previous").html("You Win!!!", + win);
 
         previous = 0;
 
